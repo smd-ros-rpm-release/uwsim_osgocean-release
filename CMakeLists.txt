@@ -75,8 +75,8 @@ find_package (OpenGL REQUIRED)
 include_directories (${OPENGL_INCLUDE_DIR})
 
 OPTION(USE_FFTW3 "Use FFTW3 (double-precision) (GPL) as FFT library." OFF)
-OPTION(USE_FFTW3F "Use FFTW3 (single-precision) (GPL) as FFT library." OFF)
-OPTION(USE_FFTSS "Use FFTSS (LGPL) as FFT library." ON)                         # Use FFTSS by default.
+OPTION(USE_FFTW3F "Use FFTW3 (single-precision) (GPL) as FFT library." ON)
+OPTION(USE_FFTSS "Use FFTSS (LGPL) as FFT library." OFF)
 
 # How do I enforce that only one of USE_FFTW3, USE_FFTW3F or USE_FFTSS should
 # be selected at one time? Is there the concept of a radio-button or
@@ -135,3 +135,5 @@ ENDIF()
 install(FILES package.xml DESTINATION share/uwsim_osgocean)
 
 add_subdirectory (src)
+
+
