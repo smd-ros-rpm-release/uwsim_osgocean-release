@@ -4,11 +4,11 @@
 
 cmake_minimum_required (VERSION 2.6 FATAL_ERROR)
 
-project (osgOcean)
+project (uwsim_osgocean)
 
-SET( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${osgOcean_BINARY_DIR}/bin)
-SET( CMAKE_LIBRARY_OUTPUT_DIRECTORY ${osgOcean_BINARY_DIR}/lib)
-SET( CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${osgOcean_BINARY_DIR}/lib)
+SET( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
+SET( CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib)
+SET( CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib)
 
 # Work around for building an xcode project. It seems XCode projects that
 # built with CMake are not compatible with relative paths.
@@ -21,7 +21,7 @@ SET(CMAKE_RELEASE_POSTFIX "" CACHE STRING "add a postfix, usually empty")
 SET(CMAKE_RELWITHDEBINFO_POSTFIX "rd" CACHE STRING "add a postfix, usually rd")
 SET(CMAKE_MINSIZEREL_POSTFIX "s" CACHE STRING "add a postfix, usually s")
 
-set(CMAKE_MODULE_PATH "${osgOcean_SOURCE_DIR}/CMakeModules;{CMAKE_MODULE_PATH}")
+set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/CMakeModules;{CMAKE_MODULE_PATH}")
 
 find_package (osg REQUIRED)
 include_directories (${OSG_INCLUDE_DIR})
@@ -129,6 +129,20 @@ IF (WIN32)
     SET(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /DYNAMICBASE")
   ENDIF(WIN32_USE_DYNAMICBASE)
 ENDIF()
+
+
+include( CMakePackageConfigHelpers )
+# Create the osgWorksConfig.cmake and osgWorksConfigVersion files
+file(RELATIVE_PATH CONF_REL_INCLUDE_DIR "${CMAKE_INSTALL_PREFIX}/lib"
+   "${CMAKE_INSTALL_PREFIX}/include")
+
+configure_package_config_file( 
+    osgOceanConfig.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/lib/${CMAKE_PROJECT_NAME}Config.cmake
+    INSTALL_DESTINATION lib
+    PATH_VARS CONF_REL_INCLUDE_DIR )
+
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/lib/${CMAKE_PROJECT_NAME}Config.cmake 
+        DESTINATION share/${CMAKE_PROJECT_NAME} )
 
 
 # Install catkin package.xml
