@@ -1,52 +1,52 @@
-SET(HEADER_PATH ${osgOcean_SOURCE_DIR}/include/osgOcean )
+SET(HEADER_PATH ${PROJECT_SOURCE_DIR}/include/osgOcean )
 
 SET( SHADER_FILES
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_ocean_surface.frag
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_ocean_surface.vert
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_ocean_surface_vbo.vert
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_ocean_surface.frag
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_ocean_surface.vert
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_ocean_surface_vbo.vert
 
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_godrays.vert
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_godrays.frag
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_godray_screen_blend.vert
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_godray_screen_blend.frag
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_godray_glare.vert
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_godray_glare.frag
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_godrays.vert
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_godrays.frag
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_godray_screen_blend.vert
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_godray_screen_blend.frag
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_godray_glare.vert
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_godray_glare.frag
 
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_silt_quads.vert
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_silt_quads.frag
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_silt_points.vert
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_silt_points.frag
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_silt_quads.vert
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_silt_quads.frag
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_silt_points.vert
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_silt_points.frag
 
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_streak.vert
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_streak.frag
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_glare_composite.vert
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_glare_composite.frag
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_streak.vert
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_streak.frag
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_glare_composite.vert
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_glare_composite.frag
 
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_downsample_glare.frag
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_downsample.vert
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_downsample.frag
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_downsample_glare.frag
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_downsample.vert
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_downsample.frag
 
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_gaussian.vert
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_gaussian1.frag
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_gaussian2.frag
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_dof_combiner.vert
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_dof_combiner.frag
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_water_distortion.vert
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_water_distortion.frag
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_gaussian.vert
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_gaussian1.frag
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_gaussian2.frag
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_dof_combiner.vert
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_dof_combiner.frag
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_water_distortion.vert
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_water_distortion.frag
 
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_ocean_scene.vert
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_ocean_scene.frag
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_ocean_scene_lispsm.vert
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_ocean_scene_lispsm.frag
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_ocean_scene.vert
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_ocean_scene.frag
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_ocean_scene_lispsm.vert
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_ocean_scene_lispsm.frag
   
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_heightmap.vert
-  ${osgOcean_SOURCE_DIR}/resources/shaders/osgOcean_heightmap.frag
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_heightmap.vert
+  ${PROJECT_SOURCE_DIR}/resources/shaders/osgOcean_heightmap.frag
 )
 
 
 SET( TEXTURE_FILES
-  ${osgOcean_SOURCE_DIR}/resources/textures/sea_foam.png
-  ${osgOcean_SOURCE_DIR}/resources/textures/sun_glare.png
+  ${PROJECT_SOURCE_DIR}/resources/textures/sea_foam.png
+  ${PROJECT_SOURCE_DIR}/resources/textures/sun_glare.png
 )
 
 SET( LIB_HEADERS
@@ -83,7 +83,7 @@ ADD_DEFINITIONS(-DOSGOCEAN_LIBRARY)
 INCLUDE_DIRECTORIES (
    ${OSG_INCLUDE_DIR}
    ${FFT_INCLUDE_DIR}
-   ${osgOcean_SOURCE_DIR}/include/
+   ${PROJECT_SOURCE_DIR}/include/
 )
 
 ADD_LIBRARY(
